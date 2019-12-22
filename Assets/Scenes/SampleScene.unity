@@ -517,6 +517,7 @@ GameObject:
   - component: {fileID: 1018600297}
   - component: {fileID: 1018600296}
   - component: {fileID: 1018600301}
+  - component: {fileID: 1018600298}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -536,10 +537,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d55a2b895f6dd0147b6356a2e2ca5fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 1018600299}
-  collider: {fileID: 1018600301}
   speed: 1000
-  tilemap: {fileID: 2127170984}
+  playerController: {fileID: 1018600298}
 --- !u!212 &1018600297
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -589,6 +588,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1018600298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018600295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224ebeaff6443534096265e42a04b51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 1018600299}
+  moveCollider: {fileID: 1018600301}
 --- !u!50 &1018600299
 Rigidbody2D:
   serializedVersion: 4
