@@ -53,15 +53,18 @@ public class Player : MonoBehaviour
         for (int i = 0; i < contactsSize; i += 1)
         {
             ContactPoint2D contact = this.contacts[i];
+            Debug.DrawLine(collision.transform.position, contact.point, Color.red);
+            Debug.DrawLine(contact.point, contact.point + contact.normal, new Color(1, 0, 1));
             Debug.Log("Point: " + contact.point);
             Debug.Log("Normal: " + contact.normal);
             // it does not work every time :(
             // cell position is sometime bad!
             // edit: it seems to work... I just move the position too far sometimes!
-            Vector2 correctedContactPoint = contact.point;
-            if (contact.normal.y < 0.5f) correctedContactPoint.y += 1;
-            if (contact.normal.x < 0.5f) correctedContactPoint.x += 1;
-            Vector2 cellPosition = this.tilemap.CellToWorld(this.tilemap.WorldToCell(correctedContactPoint));
+            // Vector2 correctedContactPoint = contact.point;
+            // if (contact.normal.y < 0.5f) correctedContactPoint.y += 1;
+            // if (contact.normal.x < 0.5f) correctedContactPoint.x += 1;
+            // Vector2 cellPosition = this.tilemap.CellToWorld(this.tilemap.WorldToCell(correctedContactPoint));
+            Vector2 cellPosition = contact.point;
 
             if (contact.normal.y > 0.5f)
             {
