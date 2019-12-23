@@ -539,6 +539,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1000
   playerController: {fileID: 1018600298}
+  tilemap: {fileID: 2127170984}
+  constructTile: {fileID: 11400000, guid: d2d41c8c7afd5ea418717b436ecfdb4d, type: 2}
 --- !u!212 &1018600297
 SpriteRenderer:
   m_ObjectHideFlags: 0
