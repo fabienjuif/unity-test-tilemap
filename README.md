@@ -1,5 +1,5 @@
 # unity-test-tilemap
-> Tilemap test with 2DExtras and RuleTile
+> Tilemap and kinematic collisions test with 2DExtras and RuleTile
 
 ## What is tested in this repository?
 - Physics
